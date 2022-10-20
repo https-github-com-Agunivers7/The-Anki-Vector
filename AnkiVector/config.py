@@ -2,40 +2,34 @@
 import json
 import os
 
-
-def get_user_list(config, key):
-    with open("{}/AnkiVector/{}".format(os.getcwd(), config), "r") as json_file:
-        return json.load(json_file)[key]
-
-
 # Create a new config.py or rename this to config.py file in same dir and import, then extend this class.
 class Config(object):
     LOGGER = True
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-    API_ID = 123456  # integer value, dont use ""
-    API_HASH = "awoo"
-    TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
-    OWNER_ID = 792109647  # If you dont know, run the bot and do /id in your private chat with it, also an integer
-    OWNER_USERNAME = "Sawada"
-    SUPPORT_CHAT = "OnePunchSupport"  # Your own group for support, do not add the @
+    API_ID = 10651048  # integer value, dont use ""
+    API_HASH = "37775aca7d11f450ecde375baac17fe7"
+    TOKEN = "5546235142:AAGUa1r-5_N1joxXLWDvcjf8uUJjs2SgShA"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
+    OWNER_ID = 1323557247  # If you dont know, run the bot and do /id in your private chat with it, also an integer
+    OWNER_USERNAME = "@Spoidermon12"
+    SUPPORT_CHAT = "Agunivers_backup"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
-        -1001253661229
+        -647696969
     )  # Prints any new group the bot is added to, prints just the name and ID.
     EVENT_LOGS = (
-        -1001190806654
+        -647696969
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = "something://somewhat:user@hosturl:port/databasename"  # needed for any database modules
-    REDIS_URI = " "
+    SQLALCHEMY_DATABASE_URI = "postgres://apex:aadhi@8.219.177.252:5432/apexdb"  # needed for any database modules
+    REDIS_URI = "redis-10774.c265.us-east-1-2.ec2.cloud.redislabs.com:10774"
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
     WEBHOOK = False
     INFOPIC = True
     URL = None
-    SPAMWATCH_API = ""  # go to support.spamwat.ch to get key
+    SPAMWATCH_API = "TcOjJ8pWGP8OxnkQWQqORD3LVm8qp8rNvZ~hP9A27fMw~fnUfWk3TvITNTkqnGyG"  # go to support.spamwat.ch to get key
     SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
 
     # OPTIONAL
